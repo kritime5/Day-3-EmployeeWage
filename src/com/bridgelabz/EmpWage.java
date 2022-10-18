@@ -5,22 +5,24 @@ import java.sql.SQLOutput;
 public class EmpWage {
     public static void main(String[] args) {
         System.out.println("Welcome to employee wage computation");
-        //UC2-CALCULATE EMPLOYEE DAILY WAGE-given wage per hr is 20 and full day hr is 8
+        //UC3-ADD PART TIME EMPLOYEE AND WAGE-PART TIME HR IS 8
         //CONSTANTS
+        int IS_PART_TIME=1;
+        int IS_FULL_TIME=2;
         int EMP_WAGE_PER_HOUR=20;
-        int IS_FULL_TIME=1;
+
         //VARIABLES
         int empHrs=0;
         int empWage=0;
         //computation
         int a=(int)(Math.random()*2);
-        if(a==1) {
-            System.out.println("The employee is present");
+        if(a==IS_PART_TIME)
+            empHrs=4;
+        else if (a==IS_FULL_TIME)
             empHrs=8;
-        }else{
-            System.out.println("Employee is absent");
+        else
             empHrs=0;
-        }
+
         empWage=empHrs*EMP_WAGE_PER_HOUR;
         System.out.println("Emp Wage:"+empWage);
 
