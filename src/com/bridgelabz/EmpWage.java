@@ -1,9 +1,5 @@
 package com.bridgelabz;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
-
 public class EmpWage {
 
     public static final int IS_PART_TIME = 1;
@@ -11,6 +7,20 @@ public class EmpWage {
     public static final int EMP_WAGE_PER_HOUR = 20;
     public static final int MAX_HRS_IN_MONTH = 100;
     public static final int NUMBER_OF_WORKING_DAYS = 20;
+    //UC-7-OOPS CONCEPT
+
+    public static double calculateEmpwage() {
+        int empHrs = 0;
+        int empWage = empHrs * EMP_WAGE_PER_HOUR;
+        double calculateEmpwage = 0;
+        return calculateEmpwage;
+    }
+
+    public static double calculateEmpwageformonth(int empHrs, int EMP_WAGE_PER_HOUR) {
+        int empWage = empHrs * EMP_WAGE_PER_HOUR * NUMBER_OF_WORKING_DAYS;
+        double calculateEmpwageformonth = 0;
+        return calculateEmpwageformonth;
+    }
 
     public static void main(String[] args) {
         System.out.println("Welcome to employee wage computation");
@@ -35,8 +45,13 @@ public class EmpWage {
                 empHrs = 0;
         }
 
-        empWage = empHrs * EMP_WAGE_PER_HOUR;
+
         System.out.println("TOTAL WORKING DAYS=" + totalWorkingDays + "Total employee hours=" + empHrs);
 
+        EmpWage Employeename = new EmpWage();
+        Employeename.calculateEmpwage();
+
     }
+
+
 }
